@@ -4,6 +4,7 @@
 // 'switched to db Human_Resourse'
 
 //Create a collection inside this named "employee"
+//dn.createCollection('employee')
 // 2.Query the collection "employee" and list all the documents.
 
 // db.employee.insertMany([{
@@ -251,6 +252,8 @@
 
 // 4.Query the collection "employee" and list the employees who are having experience more than 2 years.
 
+// 5.Query the collection "employee" and list the employees who are graduated after 2015 and having experience more than 1 year.
+
 // db.employee.find({yearGrad:{$gt:"2015"},overallExp:{$gt:"1"}})
 // { _id: ObjectId("6382f70aaba822c113a2f9a8"),
 // firstName: 'John',
@@ -296,16 +299,16 @@
 // contactInfo: '123567890',
 // yearGrad: '2019',
 // gradStream: 'EEE' }
-// 5.Query the collection "employee" and list the employees who are graduated after 2015 and having experience more than 1 year.
 
+// 6.Query the collection "employee" and update the salary of the employee whose salary is greater than 70000 to 65000.
 // db.employee.updateMany({salary:{$gt:"70000"}},{$set:{salary:"65000"}})
 // { acknowledged: true,
 //   insertedId: null,
 //   matchedCount: 0,
 //   modifiedCount: 0,
 //   upsertedCount: 0 }
-// 6.Query the collection "employee" and update the salary of the employee whose salary is greater than 70000 to 65000.
 
+// 7.Delete all the documents from "employee" where last company is Y.
 // db.employee.deleteMany({lastCompany:"Y"})
 // { acknowledged: true, deletedCount: 6 }
 // true
@@ -388,10 +391,3 @@
 //   contactInfo: '123567890',
 //   yearGrad: '2019',
 //   gradStream: 'EEE' }
-
-// 7.Delete all the documents from "employee" where last company is Y.
-
-// db.employee.deleteMany({'lastCompany':'Y'})
-// { acknowledged: true, deletedCount: 0 }
-// true
-// true
